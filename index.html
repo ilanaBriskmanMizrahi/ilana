@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .one {
+            width:50%;
+            margin-left: 25%;
+            height: 900px;
+            background-color: aqua;
+        }
+        .dot {
+        
+        display: inline-block;
+        
+        }
+
+
+        * {
+          box-sizing: border-box;
+          background-color: pink;
+        }
+        
+        .flex-container {
+          display: flex;
+          flex-direction: row;
+          font-size: 30px;
+          text-align: center;
+          
+        
+        }
+        
+        .flex-item-left {
+          background-color: #ffffff;
+          padding: 20px 0px 30px;
+          flex: 50%;
+
+        }
+        
+        .flex-item-right {
+          background-color: rgb(0, 0, 0);
+          padding: 10px;
+          flex: 50%;
+            height: 20x;
+            width: 20px;
+         background-color: rgba(97, 28, 28, 0.719);
+        border-radius: 50%;
+    
+        }
+             
+        .flex-container2 {
+          display: flex;
+          flex-direction: row;
+          font-size: 30px;
+          text-align: center;
+          
+        
+        }
+        
+        .flex-item-left2 {
+          background-color: #ffffff;
+          padding: 10px;
+          flex: 50%;
+
+        }
+        
+        .flex-item-right2 {
+          background-color: rgb(0, 0, 0);
+          padding: 10px;
+          flex: 50%;
+        }
+        
+
+        .flex-container3 {
+          display: flex;
+          flex-direction: row;
+          font-size: 30px;
+          text-align: center;
+          
+        }
+        
+        .flex-item-left3 {
+          background-color: #ffffff;
+          padding: 10px;
+          flex: 50%;
+
+        }
+        
+        .flex-item-right3 {
+          background-color: rgb(0, 0, 0);
+          padding: 10px;
+          flex: 50%;
+          height: 15x;
+          width: 15x;
+         background-color: rgba(239, 255, 93, 0.993);
+         border-radius: 50%;
+         transition: cubic-bezier();
+    
+        }
+        /* Responsive layout - makes a one column-layout instead of two-column layout */
+        @media (max-width: 800px) {
+          .flex-container {
+            flex-direction: column;
+          }
+        }
+        </style>
+        </head>
+        <body>
+      
+    <div class="one">
+        
+        <div class="flex-container">
+          <div class="flex-item-left">1</div>
+          <div class="flex-item-right">2</div>
+          <div class="flex-item-left">1</div>
+            <div class="flex-item-right">2</div>
+            <div class="flex-item-left">1</div>
+              <div class="flex-item-right">2</div>
+            <div class="flex-item-left">1</div>
+                <div class="flex-item-right">2</div>
+        </div>
+        
+        <div class="flex-container">
+           <div class="flex-item-right">1</div>
+        <div class="flex-item-left">1</div>
+           <div class="flex-item-right">1</div>
+         <div class="flex-item-left">1</div>
+             <div class="flex-item-right">1</div>
+         <div class="flex-item-left">1</div>
+               <div class="flex-item-right">1</div>
+        <div class="flex-item-left">1</div>
+        </div>
+        
+        <div class="flex-container">
+          <div class="flex-item-left">1</div>
+          <div class="flex-item-right">2</div>
+          <div class="flex-item-left">1</div>
+            <div class="flex-item-right">2</div>
+            <div class="flex-item-left">1</div>
+              <div class="flex-item-right">2</div>
+            <div class="flex-item-left">1</div>
+                <div class="flex-item-right">2</div>
+        </div>
+        
+        <div class="flex-container2">
+           <div class="flex-item-right2">1</div>
+        <div class="flex-item-left2">1</div>
+           <div class="flex-item-right2">1</div>
+         <div class="flex-item-left2">1</div>
+             <div class="flex-item-right2">1</div>
+         <div class="flex-item-left2">1</div>
+               <div class="flex-item-right2">1</div>
+        <div class="flex-item-left2">1</div>
+        </div>
+        
+        <div class="flex-container2">
+          <div class="flex-item-left2">1</div>
+          <div class="flex-item-right2">2</div>
+          <div class="flex-item-left2">1</div>
+            <div class="flex-item-right2">2</div>
+            <div class="flex-item-left2">1</div>
+              <div class="flex-item-right2">2</div>
+            <div class="flex-item-left2">1</div>
+                <div class="flex-item-right2">2</div>
+        </div>
+        
+        <div class="flex-container3">
+           <div class="flex-item-right3">1</div>
+        <div class="flex-item-left3">1</div>
+           <div class="flex-item-right3">1</div>
+         <div class="flex-item-left3">1</div>
+             <div class="flex-item-righ3t">1</div>
+         <div class="flex-item-left3">1</div>
+               <div class="flex-item-right3">1</div>
+        <div class="flex-item-left3">1</div>
+        </div>
+        
+        
+        <div class="flex-container3">
+          <div class="flex-item-left3">1</div>
+          <div class="flex-item-right3">2</div>
+          <div class="flex-item-left3">1</div>
+            <div class="flex-item-right3">2</div>
+            <div class="flex-item-left3">1</div>
+              <div class="flex-item-right3">2</div>
+            <div class="flex-item-left3">1</div>
+                <div class="flex-item-right3">2</div>
+        </div>
+        
+        <div class="flex-container3">
+           <div class="flex-item-right3">1</div>
+        <div class="flex-item-left3">1</div>
+           <div class="flex-item-right3">1</div>
+         <div class="flex-item-left3">1</div>
+             <div class="flex-item-right3">1</div>
+         <div class="flex-item-left3">1</div>
+               <div class="flex-item-right3">1</div>
+        <div class="flex-item-left3">1</div>
+        </div>
+        
+    </div>  
+        
+        </body>
+        </html>
+        
+        
+        

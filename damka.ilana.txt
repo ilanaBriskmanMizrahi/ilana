@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+  .body-container {
+    background-color: pink;
+  }
+
+  .board-container {
+    margin-top: 50px;
+    margin-left: 30%;
+  }   
+
+  .test-hovering{
+    height: 100px;
+    width: 100px;
+  }
+
+  .test-hovering:hover {
+    background-color: aquamarine;
+  }  
+  
+  
+</style>
+
+<body class="body-container">
+    <div class="board-container">
+        <div id="mainBoard"></div>
+        <div id="brownPlayers"></div>
+        <div id="yellowPlayers"></div>
+    </div>
+    <div class="test-hovering"></div>
+</body>
+
+<script>
+
+function createBoard(){
+    let colorIndex = 1;
+    let columnIndex = 0;
+    let rowIndex = 0;
+    for(let i=0; i<8; i++){
+        for(let j=0; j<8; j++){
+            let div = document.createElement("div");
+            if(colorIndex > 0){
+                div.style.background = "black";
+            }else{
+                div.style.background = "white";
+            }
+            div.style.width = "100px";
+            div.style.height = "100px";
+            document.getElementById("mainBoard").appendChild(div);
+            colorIndex = colorIndex * -1;
+            div.style.position = "absolute";
+            div.style.margin = rowIndex + "px " + columnIndex + "px 0px";
+            columnIndex = columnIndex + 100
+        }
+        columnIndex = 0;
+        rowIndex = rowIndex + 100;
+        colorIndex = colorIndex * -1;
+    } 
+}
+
+function createBrownPlayers(){
+    let columnIndex = 5;
+    let rowIndex = 5;
+    for(let i=0; i<3; i++){
+        for(let j=0; j<4; j++){
+            let div = document.createElement("div")
+            div.style.background = "#964B00";
+            div.style.width = "90px";
+            div.style.height = "90px";
+            div.style.position = "absolute";
+            div.style.margin = rowIndex + "px " + columnIndex + "px 0px";
+            div.style.padding = "";
+            document.getElementById("brownPlayers").appendChild(div);
+            div.style.borderRadius = "50%";
+            columnIndex = columnIndex + 200;
+        }
+        if(i % 2 == 0){
+            columnIndex = 105;
+        }else{
+            columnIndex = 5;
+        }  
+        rowIndex = rowIndex + 100  
+    }
+}
+
+function createYellowPlayers(){
+    let columnIndex = 105;
+    let rowIndex = 505;
+    for(let i=0; i<3; i++){
+        for(let j=0; j<4; j++){
+            let div = document.createElement("div")
+            div.style.background = "yellow";
+            div.style.width = "90px";
+            div.style.height = "90px";
+            div.style.position = "absolute";
+            div.style.margin = rowIndex + "px " + columnIndex + "px 0px";
+            div.style.padding = "";
+            document.getElementById("yellowPlayers").appendChild(div);
+            div.style.borderRadius = "50%";
+            columnIndex = columnIndex + 200;
+        }
+        if(i % 2 == 0){
+            columnIndex = 5;
+        }else{
+            columnIndex = 105;
+        }  
+        rowIndex = rowIndex + 100  
+    }
+}
+   
+
+createBoard();
+createBrownPlayers();
+createYellowPlayers();
+
+</script>    
+</html>
